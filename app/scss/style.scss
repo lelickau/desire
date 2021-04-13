@@ -4,4 +4,186 @@
 @import 'libs';
 @import 'global';
 
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
 
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.menu {
+    padding-left: 35px;
+    padding-right: 60px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item+.menu__list-item {
+        padding-left: 80px;
+    }
+
+    &__list-link {
+        @extend %title-font;
+        line-height: 22px;
+        color: rgba(54, 56, 56, 0.9);
+    }
+}
+
+.footer {
+    &__content {
+        background-color: #dfdfdf;
+        padding: 60px 0 80px;
+
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 540px;
+    }
+
+    &__info-title {
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+        margin-bottom: 14px;
+    }
+
+    &__info-text {
+        margin-bottom: 16px;
+        max-width: 475px;
+    }
+
+    &__info-email {
+        font-size: 14px;
+        font-weight: 600;
+        color: $title;
+        margin-bottom: 22px;
+        padding-left: 30px;
+        display: inline-block;
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url('../images/footer/email.svg');
+            top: 8px;
+            position: absolute;
+            width: 16px;
+            height: 12px;
+            left: 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-input {
+        padding: 6px 10px 6px 18px;
+        border: 1px solid rgba($title, 0.7);
+        box-sizing: border-box;
+        border-radius: 21px;
+        background-color: transparent;
+        width: 100%;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #a1a1a1;
+        }
+    }
+
+    &__form-btn {
+        margin-left: 9px;
+        background: $title;
+        border-radius: 21px;
+        font-weight: 600;
+        color: #fff;
+        padding: 6px 12px;
+        width: 160px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    &__copyright {
+        background-color: $title;
+        font-size: 16px;
+        text-align: center;
+        padding: 42px 0 41px;
+    }
+
+    &__social {
+        width: 125px;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+    &__menu {
+        width: 125px;
+        margin-right: 60px;
+    }
+
+    &__menu-item,
+    &__social-item {
+        margin-bottom: 15px;
+    }
+
+    &__social-link {
+        padding-left: 28px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            top: 3px;
+        }
+    }
+
+    &__social-link--facebook::before {
+        background-image: url(../images/footer/facebook.svg);
+    }
+    &__social-link--instagram::before {
+        background-image: url(../images/footer/instagram.svg);
+        top: 4px;
+        width: 14px;
+        height: 14px;
+    }
+    &__social-link--whatsapp::before {
+        background-image: url(../images/footer/whatsapp.svg);
+        width: 14px;
+        height: 14px;
+    }
+    &__social-link--pinterest::before {
+        background-image: url(../images/footer/pinterest.svg);
+    }
+    &__social-link--youtube::before {
+        background-image: url(../images/footer/youtube.svg);
+        width: 18px;
+        height: 12px;
+        top: 4px;
+    }
+
+    &__social-link,
+    &__menu-link {
+        font-weight: 600;
+        font-size: 14px;
+        color: #707070;
+    }
+}
