@@ -10,4 +10,10 @@ $(function () {
         arrows: false,
         autoplay: true
     });
+
+    var mixer = mixitup('.gallery__inner', {
+        load: {
+            filter: '.living',
+        }
+    });
 })
