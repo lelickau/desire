@@ -58,6 +58,23 @@ body {
 	}
 }
 
-
+.info-email {
+	font-size: 14px;
+	font-weight: 600;
+	color: $title;
+	margin-bottom: 22px;
+	padding-left: 30px;
+	display: inline-block;
+	position: relative;
+	&::before {
+		content: '';
+		background-image: url('../images/footer/email.svg');
+		top: 8px;
+		position: absolute;
+		width: 16px;
+		height: 12px;
+		left: 0;
+	}
+}
 
 
