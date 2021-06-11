@@ -1210,7 +1210,8 @@
     }
 
     &__arrow--disabled {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
 
     &__list-num {
@@ -1221,5 +1222,210 @@
 
     &__list-num--active {
         color: $title;
+    }
+}
+
+.blog-one__item {
+    p {
+        margin-bottom: 40px;
+    }
+
+    blockquote {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic;
+        color: $title;
+        padding: 0 40px;
+        margin-bottom: 30px;
+    }
+
+    .blog__blockquote-autor::after {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+.blog-one {
+    &__tags {
+        margin-bottom: 30px;
+    }
+
+    &__tags-title {
+        color: $title;
+        @extend %title-font;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 15px;
+    }
+
+    &__tags-link {
+        margin-bottom: 10px;
+        margin-right: 23px;
+        padding: 0 16px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        color: #8F8D8D;
+        border: 1px solid rgba(#454647, .5);
+        border-radius: 14px;
+        display: inline-block;
+    }
+
+    &__links {
+        padding: 40px 0 32px;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+
+    &__link {
+        width: 243px;
+        position: relative;
+        color: #707070;
+        font-style: 14px;
+        font-weight: 600;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 23px;
+        }
+    }
+
+    &__link-prev {
+        padding-left: 44px;
+
+        &::before {
+            background-image: url(../images//blog/arr-blog-prev.svg);
+            left: 0;
+        }
+
+    }
+
+    &__link-next {
+        padding-right: 44px;
+        text-align: right;
+
+        &::before {
+            background-image: url(../images//blog/arr-blog-next.svg);
+            right: 0;
+        }
+    }
+
+
+    &__comments-title {
+        color: $title;
+        @extend %title-font;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 15px;
+    }
+
+    &__comments-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+
+    &__comments-avatar {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+
+    &__comments-name{
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+    }
+    &__comments-data{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+
+    &__reply {
+        background-color: transparent;
+        margin-left: 5px;
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #707070;
+        cursor: pointer;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__form-title {
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+        margin-bottom: 25px;
+    }
+
+    &__form-textarea  {
+        width: 100%;
+        border: 1px solid #DFDFDF;
+        border-radius: 24px;
+        padding: 14px 16px;
+        margin-bottom: 12px;
+        min-height: 125px;
+        resize: none;
+
+        &::placeholder {
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 400;
+        }
+    }
+
+    &__form-input {
+        border: 1px solid #DFDFDF;
+        border-radius: 20px;
+        width: 48%;
+        padding: 6px 17px;
+        margin-bottom: 20px;
+
+        &::placeholder {
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 400;
+        }
+    }
+
+    &__form-lable {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+
+    &__form-btn {
+        margin-left: 9px;
+        background: $title;
+        border-radius: 21px;
+        font-weight: 600;
+        color: #fff;
+        padding: 6px 12px;
+        width: 160px;
+        border: 1px solid transparent;
+        cursor: pointer;
     }
 }
