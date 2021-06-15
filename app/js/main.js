@@ -32,4 +32,8 @@ $(function () {
             filter: '.living',
         }
     });
+
+    if($(window).width() < 651) {
+        $('.works-path__item--measuring').appendTo($('.works-path__items-box'));
+    }
 })
