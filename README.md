@@ -1,4 +1,9 @@
-### [Desire](lelickau.github.io/desire/dist/index.html) Многостраничный сайт (6 страниц). HTML/CSS(SCSS)/JavaScript (jquery)
+<<<<<<< HEAD
+### [Desire](lelickau.github.io/desire/dist/index.html) Многостраничный сайт (6 страниц).
+HTML/CSS(SCSS)/JavaScript (jquery)
+=======
+### [Desire](https://lelickau.github.io/desire/dist/index.html) Многостраничный сайт (6 страниц).
+>>>>>>> 27b29fed24b9256299532c33176ef0ccc8f975ef
 
 ### Gulp сборка:
 - [x] browser-sync - отслеживание изменений в исходных файлах и скриптах без перезагрузки веб-страницы.
